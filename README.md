@@ -1,1 +1,1 @@
-# testGit2
+# Go Learning and GitHub synchronize learn records
