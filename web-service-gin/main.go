@@ -32,6 +32,7 @@ func postAlbums(c *gin.Context) {
 	c.IndentedJSON(http.StatusCreated, newAlbum)
 }
 
+//get json object by album id
 func getAlbumByID(c *gin.Context) {
 	id := c.Param("id")
 	for _, item := range albums {
@@ -53,13 +54,17 @@ func mainPost() {
 	router := gin.Default()
 	router.GET("/albums", getAlbums)
 	router.POST("/albums", postAlbums)
-	router.Run("localhost:8080") //localhost or 192.168.56.108
+	router.Run("localhost:8081") //localhost or 192.168.56.108
 }
 
 func mainGetAlbumByID() {
-
+	router := gin.Default()
+	router.GET("/albums", getAlbums)
+	router.POST("/albums", postAlbums)
+	router.GET("/albums/:id", getAlbumByID)
+	router.Run("192.168.56.108:8081")
 }
 
 func main() {
-	mainPost()
+	mainGetAlbumByID()
 }
