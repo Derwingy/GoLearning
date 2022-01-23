@@ -66,5 +66,5 @@ func mainGetAlbumByID() {
 }
 
 func main() {
-	mainGetAlbumByID()
+	mainGetAlbumByID() //get per album params by id
 }
