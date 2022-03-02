@@ -1,9 +1,15 @@
-package main
+package webservicegin
+
+//web_service_gin
 
 import (
-	"net/http"
+	"fmt"
 
 	"github.com/gin-gonic/gin"
+
+	"net/http"
+
+	go_lan "GoLearning/go-prog-lan"
 )
 
 type album struct {
@@ -67,4 +73,6 @@ func mainGetAlbumByID() {
 
 func main() {
 	mainGetAlbumByID() //get per album params by id
+	res := go_lan.NewRequestID()
+	fmt.Println(res)
 }
