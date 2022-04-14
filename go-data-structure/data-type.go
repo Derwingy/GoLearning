@@ -6,7 +6,7 @@ type IdInt int
 
 type NameStr string
 
-func funcBool(id int, str string, p []byte) bool {
+func boolUsage(id int, str string, p []byte) bool {
 	if id == 1 || len(p) == 0 {
 		return true
 	}
@@ -18,10 +18,25 @@ func (i *IdInt) Write(p []byte) (int, error) {
 	return len(p), nil
 }
 
-func main() {
-	buf := []byte("opssre")
-	res := funcBool(10, "Young", buf)
+func mapUsage() []string {
+	mp := make(map[string]int)
+	mp["year"] = 2022
+	mp["month"] = 04
+	mp["day"] = 13
+
+	keys := make([]string, 0, len(mp))
+	for k := range mp {
+		keys = append(keys, k)
+	}
+	return keys
+}
+
+func output() {
+	buf := []byte("sre")
+	res := boolUsage(10, "Young", buf)
 	if res {
 		fmt.Print("ok")
 	}
+	mapRes := mapUsage()
+	fmt.Print(mapRes)
 }
