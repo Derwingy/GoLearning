@@ -6,6 +6,9 @@ import (
 	"log"
 	"time"
 
+	ds "golearning/godatastructure"
+	pl "golearning/goproglan"
+
 	"go.etcd.io/etcd/clientv3"
 )
 
@@ -60,5 +63,6 @@ func EtcdBaseOperation() {
 
 func main() {
 	EtcdBaseOperation()
-	ds.output()
+	pl.NewRequestID()
+	ds.MapUsage()
 }
