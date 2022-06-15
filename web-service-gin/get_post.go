@@ -9,7 +9,7 @@ import (
 
 	"net/http"
 
-	go_lan "golearning/go-prog-lan"
+	go_lan "golearning/goproglan"
 )
 
 type album struct {

@@ -65,4 +65,5 @@ func main() {
 	EtcdBaseOperation()
 	pl.NewRequestID()
 	ds.MapUsage()
+	pl.FlagUse()
 }
